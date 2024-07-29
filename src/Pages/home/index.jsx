@@ -1,10 +1,10 @@
 import { useState } from "react";
 import NavBarHome from "../../Components/navBarHome";
 import PatientCalendar from "../../Components/patientCalendar"
-import FormPatientCrud from '../../Components/formPatientCrud'
+import FormPatientCrud from '../../Components/patientConfig'
 import ViewDoctorCalendar from '../../Components/viewDoctorCalendar';
 import ViewTratamiento from '../../Components/viewTratamientos';
-import FormDoctorCrud from '../../Components/formDoctorCrud'
+import FormDoctorCrud from '../../Components/doctorConfig'
 import SideBar from "../../Components/sideBar";
 
 import ViewPatient from "../../Components/viewPatient"
