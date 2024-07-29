@@ -1,13 +1,14 @@
 import { useState } from "react";
 import NavBarHome from "../../Components/navBarHome";
-import ViewPatientCalendar from './../../Components/viewPatientCalendar/Index';
-import FormPatientCrud from '../../Components/formPatientCrud/Index'
-import ViewDoctorCalendar from '../../Components/viewDoctorCalendar/Index';
-import ViewTratamiento from '../../Components/viewTratamientos/Index';
-import FormDoctorCrud from '../../Components/formDoctorCrud/Index'
+import ViewPatientCalendar from '../../Components/viewPatientCalendar';
+import FormPatientCrud from '../../Components/formPatientCrud'
+import ViewDoctorCalendar from '../../Components/viewDoctorCalendar';
+import ViewTratamiento from '../../Components/viewTratamientos';
+import FormDoctorCrud from '../../Components/formDoctorCrud'
 import SideBar from "../../Components/sideBar";
+
 import ViewPatient from "../../Components/viewPatient"
-import ViewNotas from "../../Components/viewNotas/Index";
+import ViewNotas from '../../Components/viewNotas'
 function Home() {
     const [view, setView] = useState("inicio")
     const [rol, setRol] = useState("paciente");
