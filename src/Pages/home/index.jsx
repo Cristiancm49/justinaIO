@@ -3,12 +3,12 @@ import NavBarHome from "../../Components/navBarHome";
 import PatientCalendar from "../../Components/patientCalendar"
 import FormPatientCrud from '../../Components/patientConfig'
 import ViewDoctorCalendar from '../../Components/doctorCalendar';
-import ViewTratamiento from '../../Components/viewTratamientos';
+import ViewTratamiento from '../../Components/tratamiento';
 import FormDoctorCrud from '../../Components/doctorConfig'
 import SideBar from "../../Components/sideBar";
 
 import ViewPatient from "../../Components/viewPatient"
-import ViewNotas from '../../Components/viewNotas'
+import ViewNotas from '../../Components/notas'
 function Home() {
     const [view, setView] = useState("inicio")
     const [rol, setRol] = useState("paciente");
