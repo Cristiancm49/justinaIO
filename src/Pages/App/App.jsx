@@ -20,7 +20,7 @@ const AppRoutes = () => {
     {path: '/resetPassword', element: <EmailResetPassword />},
     {path: '/', element: <LandingPage />},
     { path: '/resetPassword', element: <EmailResetPassword />},
-    {path:'/home', element: <Home />},
+    {path:'/home', element: <Home />}
     
   ])
 
