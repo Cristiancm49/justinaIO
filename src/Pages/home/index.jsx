@@ -1,6 +1,6 @@
 import { useState } from "react";
 import NavBarHome from "../../Components/navBarHome";
-import ViewPatientCalendar from '../../Components/viewPatientCalendar';
+import PatientCalendar from "../../Components/patientCalendar"
 import FormPatientCrud from '../../Components/formPatientCrud'
 import ViewDoctorCalendar from '../../Components/viewDoctorCalendar';
 import ViewTratamiento from '../../Components/viewTratamientos';
@@ -21,7 +21,7 @@ function Home() {
                     {view === "patient" && <ViewPatient />}
                     {view === "not" && <ViewNotas />}
                     {view === "treatment" && <ViewTratamiento />}
-                    {view === "calendar" && rol === "paciente" && <ViewPatientCalendar /> }
+                    {view === "calendar" && rol === "paciente" && <PatientCalendar /> }
                     {view === "calendar" && rol === "medico" && <ViewDoctorCalendar />}
                     {view === "confi" && rol === "medico" && <FormDoctorCrud/> }
                     {view === "config" && rol === "paciente" && <FormPatientCrud />}
