@@ -19,7 +19,6 @@ const AppRoutes = () => {
     { path: '/patientProfile', element: <PatientProfile/>},
     {path: '/resetPassword', element: <EmailResetPassword />},
     {path: '/', element: <LandingPage />},
-    { path: '/resetPassword', element: <EmailResetPassword />},
     {path:'/home', element: <Home />}
     
   ])
