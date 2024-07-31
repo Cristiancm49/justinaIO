@@ -1,8 +1,8 @@
 import { Button } from "@/Components/ui/button";
 import ImgJustina from "../../assets/justinaLanding.svg";
-import { Link } from "react-router-dom";
 import ImgCorazonTwo from "../../assets/VectorCorazon.svg";
 import ImgCorazon from "../../assets/corazon.svg";
+import { Link } from "react-router-dom";
 
 function Inicio() {
   return (
@@ -18,7 +18,7 @@ function Inicio() {
           Unite a nuestra comunidad, salva vidas y mantenete informado con
           Justina.io. Cada latido cuenta.
         </p>
-        <Link to="/registro">
+        <Link to={"/registro"}>
           <Button className="rounded-3xl bg-inputPrimary w-full lg:w-3/5">
             ¡Unite ahora y salva vidas!
           </Button>
