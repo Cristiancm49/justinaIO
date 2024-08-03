@@ -8,7 +8,7 @@ import { Input } from "@/Components/ui/input";
 function NavBarHome({ toggleSidebar }) {
   return (
     <div className="w-full h-[75px] py-4 px-4 md:pl-6 md:pr-12 bg-white flex items-center justify-between gap-4">
-      {/* Icono de menú para dispositivos pequeños */}
+      
       <img 
         className="flex md:hidden cursor-pointer" 
         src={Menu} 
@@ -16,7 +16,7 @@ function NavBarHome({ toggleSidebar }) {
         onClick={toggleSidebar} 
       />
 
-      {/* Barra de búsqueda */}
+  
       <div className="flex-grow max-w-lg flex items-center relative">
         <Input 
           className="w-full rounded-3xl pl-12 pr-4 py-2 border border-borderCard" 
@@ -29,7 +29,7 @@ function NavBarHome({ toggleSidebar }) {
         />
       </div>
 
-      {/* Iconos de notificaciones, ayuda y perfil */}
+      
       <div className="flex items-center gap-4 md:gap-6">
         <img src={bell} alt="Notificaciones" className="w-5 md:w-6" />
         <img src={helpCircle} alt="Ayuda" className="w-5 md:w-6" />
