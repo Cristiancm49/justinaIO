@@ -461,8 +461,8 @@ function ViewPatientCalendar() {
 
 
     return (
-        <div className=' flex flex-col  w-11/12'>
-            <div className='flex-grow bg-secondary p-4 w-full md:2/3'>
+        <div className=' flex flex-col md:flex-row w-full justify-center'>
+            <div className='flex-grow bg-secondary p-4 w-11/12 md:2/3'>
                 <h4 className="text-3xl sm:text-2xl font-normal">Dia: {formatDateToES(date1)}</h4>
                 <p>Esta es tu agenda de eventos del día.</p>
                 <div className="flex pt-4 space-x-20 ">
@@ -652,7 +652,7 @@ function ViewPatientCalendar() {
                                             </Button>
                                         </div>
                                     </DialogTrigger>
-                                    <DialogContent className="sm:max-w-[350px] md:max-w-[350px] lg:max-w-[350px] gap-2 overflow-y-auto max-h-[80vh]">
+                                    <DialogContent className=" w-full  gap-2  ">
                                         <DialogHeader>
                                             <DialogTitle>Nuevo evento</DialogTitle>
                                             <DialogDescription>
@@ -660,7 +660,7 @@ function ViewPatientCalendar() {
                                             </DialogDescription>
                                         </DialogHeader>
 
-                                        <div className='py-4 rounded-md border  items-center'>
+                                        <div className='py-4 w-full rounded-md border  items-center'>
                                             <div className='items-center'>
                                                 <Calendar
                                                     mode="single"
