@@ -23,7 +23,6 @@ function Home() {
   const sidebarRef = useRef(null);
   const rol = auth.user.role
   const name = auth.user.firstName
-  const data = auth.user
 
 
   console.log(rol)
@@ -75,10 +74,10 @@ function Home() {
           {view === "patient" && <ViewPatient patients={patients} />}
           {view === "not" && <ViewNotas />}
           {view === "treatment" && rol === 'PACIENTE' && <ViewTratamiento />}
-          {view === "calendar" && rol === "PACIENTE" && <PatientCalendar  />}
+          {view === "calendar" && rol === "PACIENTE" && <PatientCalendar />}
           {view === "calendar" && rol === "MEDICO" && <ViewDoctorCalendar />}
           {view === "config" && rol === "MEDICO" && <FormDoctorCrud />}
-          {view === "config" && rol === "PACIENTE" && <FormPatientCrud user={data}/>}
+          {view === "config" && rol === "PACIENTE" && <FormPatientCrud />}
           {view === "inicio" && rol === "PACIENTE" && <ViewPatientHome name={name}/>}
           {view === "inicio" && rol === "MEDICO" && <ViewDoctorHome name={name} />}
           {view === "history" && rol === "PACIENTE" && <ViewPatientHistory />}
