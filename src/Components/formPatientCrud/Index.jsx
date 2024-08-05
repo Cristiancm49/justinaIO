@@ -1,5 +1,3 @@
-// "use client"
-
 import { format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"
 
@@ -21,13 +19,13 @@ import { Label } from "@/Components/ui/label";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { date, z } from "zod";
 
 import { SquarePen } from 'lucide-react';
 
 
 
-function FormPatientCrud() {
+function FormPatientCrud({ user }) {
 
   const formSchema = z.object({
     nombre: z.string().min(1, "Ingresa tu nombre"),
@@ -114,6 +112,7 @@ function FormPatientCrud() {
                     className="py-0.1 border border-colorInputBorder"
                     placeholder="Nombre"
                     type="text"
+                    value={user.firstName}
                     {...register("nombre")}
                     readOnly={!isEditable}
                   />
@@ -125,6 +124,7 @@ function FormPatientCrud() {
                     className="border border-colorInputBorder"
                     type="text"
                     placeholder="Apellido"
+                    value={user.lastName}
                     {...register("apellido")}
                     readOnly={!isEditable}
                   />
@@ -136,6 +136,7 @@ function FormPatientCrud() {
                   </Label>
                   <select
                     id="tipoDocumentoId"
+                    value={user.dniType}
                     {...register("tipoDocumentoId")}
                     readOnly={!isEditable}
                     disabled={!isEditable}
@@ -160,6 +161,7 @@ function FormPatientCrud() {
                   <Input
                     type="number"
                     placeholder="Número de documento"
+                    value={user.dni}
                     {...register("numeroDocumento")}
                     readOnly={!isEditable}
                     disabled={!isEditable}
@@ -175,6 +177,7 @@ function FormPatientCrud() {
                   </Label>
                   <select
                     id="tipoUsuario"
+                    value={user.name}
                     {...register("tipoUsuario")}
                     readOnly={!isEditable}
                     disabled={!isEditable}
@@ -195,6 +198,7 @@ function FormPatientCrud() {
                   </Label>
                   <select
                     id="sexo"
+                    value={user.gender}
                     {...register("sexo")}
                     readOnly={!isEditable}
                     disabled={!isEditable}
@@ -222,8 +226,9 @@ function FormPatientCrud() {
                 /> */}
 
                   <Popover>
-                    <PopoverTrigger asChild>
+                    <PopoverTrigger  asChild>
                       <Button
+                      
                         variant={"outline"}
                         className={cn(
                           "text-left font-normal mt-0 block w-full border border-gray-300  rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 ",
@@ -253,6 +258,7 @@ function FormPatientCrud() {
                         selected={date}
                         onSelect={setDate}
                         initialFocus
+                        value={user.birthday}
                       />
                     </PopoverContent>
                   </Popover>

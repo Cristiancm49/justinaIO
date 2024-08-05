@@ -2,12 +2,12 @@ import { useState, useMemo } from "react";
 import CardPatient from "../cardPatient";
 import Search from "../../assets/iconHome/search.svg";
 import { Input } from "@/Components/ui/input";
-import DetailPatient from "../detailPatient";  
+import DetailPatient from "../detailPatient";  // Asegúrate de que el path sea correcto
 
 function ViewPatient({ patients }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOption, setSortOption] = useState("");
-  const [selectedPatient, setSelectedPatient] = useState(null);  
+  const [selectedPatient, setSelectedPatient] = useState(null);  // Nuevo estado para paciente seleccionado
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -18,7 +18,7 @@ function ViewPatient({ patients }) {
   };
 
   const handlePatientClick = (patient) => {
-    setSelectedPatient(patient);  
+    setSelectedPatient(patient);  // Establece el paciente seleccionado
   };
 
   const filteredPatients = useMemo(() => {
@@ -75,7 +75,7 @@ function ViewPatient({ patients }) {
           <div className="flex-grow overflow-hidden">
             <div className="bg-white rounded-md h-full border border-borderCard p-4 md:p-6 overflow-y-auto max-h-[calc(100vh-290px)]">
               {selectedPatient ? (
-                <DetailPatient data={selectedPatient} />  
+                <DetailPatient data={selectedPatient} />  // Mostrar detalle del paciente seleccionado
               ) : (
                 <div className="flex flex-col gap-4">
                   {sortedPatients.length > 0 ? (
@@ -83,7 +83,7 @@ function ViewPatient({ patients }) {
                       <CardPatient
                         key={patient.id}
                         data={patient}
-                        onClick={() => handlePatientClick(patient)}  
+                        onClick={() => handlePatientClick(patient)}  // Añadir evento onClick
                       />
                     ))
                   ) : (
